@@ -34,7 +34,7 @@ async def autohentai_parser():
     img = result["reposone"][0]["poster_url"]
     is_hentai = hentai.find_one({"url": url})
     if not is_hentai:
-        l = f"https://hanime.metavoid.info/link?id={url}"
+        l = f"https://hanime.tv/link?id={url}"
         k = requests.get(l)
         data = k.json()
         k = data["data"][0]["url"]
