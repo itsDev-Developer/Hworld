@@ -26,7 +26,7 @@ app = Client(
 async def autohentai_parser():
     hentaidb = MongoClient(MONGO_URL)
     hentai = hentaidb["HentaiDb"]["Name"]
-    url = f"https://hanime.metavoid.info/recent"
+    url = f"https://hanime.tv/recent"
     result = requests.get(url)
     result = result.json()
     url = result["reposone"][0]["slug"]
